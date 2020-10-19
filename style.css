@@ -1,0 +1,294 @@
+:root {
+    --main-title-color: rgb(217,149,120);
+    --secondary-color:rgb(119,119,119);
+    --dark-color: rgb(48,46,47);
+    --clear-color: rgb(244,235,232);
+  }
+
+*{margin:0;
+padding:0;}
+
+
+@font-face {
+    font-family: "Prata";
+    src: url("./Prata/Prata-Regular.ttf") format("truetype");
+  }
+
+
+  @font-face {
+    font-family: "Muli";
+    src: url("./Muli/Black.ttf") format("truetype"),
+        url("./Muli/BlackItalic.ttf") format("truetype"),
+        url("./Muli/Bold.ttf") format("truetype"),
+        url("./Muli/BoldItalic.ttf") format("truetype"),
+        url("./Muli/ExtraBold.ttf") format("truetype"),
+        url("./Muli/ExtraBoldItalic.ttf") format("truetype"),
+        url("./Muli/ExtraLight.ttf") format("truetype"),
+        url("./Muli/ExtraLightItalic.ttf") format("truetype"),
+        url("./Muli/Italic.ttf") format("truetype"),
+        url("./Muli/Light.ttf") format("truetype"),
+        url("./Muli/LightItalic.ttf") format("truetype"),
+        url("./Muli/Medium.ttf") format("truetype"),
+        url("./Muli/MediumItalic.ttf") format("truetype"),
+        url("./Muli/Regular.ttf") format("truetype"),
+        url("./Muli/SemiBold.ttf") format("truetype"),
+        url("./Muli/SemiBoldItalic.ttf") format("truetype");
+  }
+
+  /*------------------------------DEBUT DU CODE------------------------------*/
+
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "footer footer footer footer";
+
+}
+
+/* ------------- HEADER ----------------*/
+.header {
+    grid-area: header;
+  }
+
+
+/*--------------------- MAIN------------------*/
+
+
+  .main {
+    grid-area: main;
+  }
+
+
+  /*|------------------|
+    |---- ABOUT US ----|
+    |------------------|*/
+
+.aboutus_a {      grid-template-columns: 31% 31%;
+    display: grid;
+    grid-gap: 3em;
+    justify-content: center;
+    align-self: center;
+    line-height: 0.5;
+
+}
+
+/* ---- Decription ---- */
+.description { margin-top: 7em;
+
+     }
+
+.description a {
+        text-decoration: none;
+        color: white;
+      }
+.description h5 {
+        margin-bottom: 1em;
+        border-top: 1.5px solid var(--main-title-color);
+        padding-top: 15px;
+        font-family: "Muli", sans-serif;
+        font-weight:300;
+        font-size:0.7vw;
+        color: var(--secondary-color);
+        width: fit-content;
+      }
+
+      .description p{
+        color:var(--secondary-color);
+        font-family: "Muli", sans-serif;
+        font-weight:300;
+        font-size:0.9vw;
+        line-height:1.7;
+
+            }
+
+
+.description__title {line-height:2;
+        font-family: "Prata";
+        font-size:2.1em;
+        color: var(--dark-color);
+      }
+
+.description__secondary-title {line-height:1.3;
+        font-family: "Prata";
+        font-size:1.3em;
+        color: var(--dark-color);
+      }
+
+.description__bouton {margin-top:2em;
+    /* haut | droit | bas | gauche */
+        padding: 0.8em 2.6em 0.8em 2.6em;
+        border-radius: 5px;
+        background-color:var(--main-title-color);
+        border: 1px var(--main-title-color);
+        text-align: center;
+        width:fit-content;
+
+      }
+
+
+
+/* ---- Pictures ---- */
+.pics { margin-top: 7em;}
+
+
+.pics__first {    position:absolute;
+    width:250px;
+height:240px;
+background-color: var(--main-title-color);
+transform: translate(30%, 60%);
+z-index: 1;}
+
+.pics__second {     grid-template-columns: 40% 12% 20%;
+    grid-column-gap:0.8em;
+    display: grid;
+    position:absolute;
+    padding:1.25em;
+width:210px;
+height:170px;
+border:1.5px solid #dddddd;
+transform: translate(46%, 22%);
+z-index: 3;}
+
+.pics__second__1 {
+    height:20%;
+    border-right:1px solid var(--main-title-color);
+    background: linear-gradient(var(--clear-color), #ffffff);}
+
+
+.pics__second__2 {    line-height:1;
+        font-family: "Prata";
+        font-size:40px;
+    }
+
+.pics__second__3{   line-height:1.5;
+   font-family: "Prata";
+   font-size:13px;}
+
+.pics__image1{
+    position:absolute;
+    width:250px;
+    transform: translate(55%, 85%);
+    z-index: 4;}
+
+  .pics__image2 {      position:absolute;
+    width:250px;
+    transform: translate(0, 55%);
+    z-index: 2;
+  }
+
+
+  /*|--------------------|
+    |---- MEMBERSHIP ----|
+    |--------------------|*/
+
+
+.membership_a {      grid-template-columns: 31% 31%;
+    grid-template-rows: 45% 10%;
+    display: grid;
+    grid-gap: 3em;
+    justify-content: center;
+    align-self: center;
+    line-height: 0.5;
+    margin-top:2em;
+
+}
+
+.membership_b {
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(191, 140, 118, 0.9)),
+    url('./images/video-bg-1-1.jpg');
+    width: 100%;
+    height: 360px;
+    background-size: 100%;
+    color: white;
+    background-position: 0% 105%;}
+
+.ruler {  position: absolute;
+    top:906px;
+    background-image:url('./images/ruler.png');
+    width:100%;
+    height:10%;
+    background-size: 10%;
+    opacity: 0.4;
+    background-repeat: repeat-x;
+    z-index: -1;}
+
+
+
+/* ---- Member vid ---- */
+.member-vid { display:grid;
+    margin-top: 7em;
+width:450px;
+height:350px;
+transform: translate(-20%, -8%);
+align-content: center;
+justify-items: center;}
+
+.member-vid__vid {      position:absolute;
+    width:450px;
+    z-index: 2;
+  }
+
+  .member-vid__play {    position:relative;
+    width:90px;
+    fill: white;
+    z-index: 3;
+  }
+
+/* ---- Member content ---- */
+.member { 
+position: absolute;
+padding-left:40em;
+padding-top:5.2em;
+
+     }
+
+.member a {
+        text-decoration: none;
+        color:var(--secondary-color);
+        font-weight:300;
+        font-size:10px;
+      }
+
+
+.member img {  display: inline-flex;
+    align-self: center;
+    width:10px;
+    padding-right: 10px;
+
+  }
+
+
+.member p{
+        color:white;
+        font-family: "Muli", sans-serif;
+        font-weight:500;
+        font-size:1.1vw;
+        line-height:2.4;
+
+            }
+
+
+.member__title {line-height:1.2;
+        font-family: "Prata";
+        font-size:2.2vw;
+        padding-bottom:0.5em;
+      }
+
+
+.member__bouton {margin-top:1em;
+    /* haut | droit | bas | gauche */
+        padding: 0.3em 5.5em 0.3em 5.5em;
+        border-radius: 5px;
+        background-color:white;
+        border: 1px white;
+        text-align: center;
+        width:fit-content;
+
+      }
+
+/*------------------------ FOOTER ----------------*/
+  .footer {
+      grid-area: footer;
+  }
