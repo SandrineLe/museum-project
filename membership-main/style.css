@@ -1,0 +1,166 @@
+:root {
+    --main-title-color: rgb(217,149,120);
+    --secondary-color:rgb(119,119,119);
+    --dark-color: rgb(48,46,47);
+    --clear-color: rgb(244,235,232);
+  }
+
+*{margin:0;
+padding:0;}
+
+
+@font-face {
+    font-family: "Prata";
+    src: url("../Prata/Prata-Regular.ttf") format("truetype");
+  }
+
+
+  @font-face {
+    font-family: "Muli";
+    src: url("../Muli/Black.ttf") format("truetype"),
+        url("../Muli/BlackItalic.ttf") format("truetype"),
+        url("../Muli/Bold.ttf") format("truetype"),
+        url("../Muli/BoldItalic.ttf") format("truetype"),
+        url("../Muli/ExtraBold.ttf") format("truetype"),
+        url("../Muli/ExtraBoldItalic.ttf") format("truetype"),
+        url("../Muli/ExtraLight.ttf") format("truetype"),
+        url("../Muli/ExtraLightItalic.ttf") format("truetype"),
+        url("../Muli/Italic.ttf") format("truetype"),
+        url("../Muli/Light.ttf") format("truetype"),
+        url("../Muli/LightItalic.ttf") format("truetype"),
+        url("../Muli/Medium.ttf") format("truetype"),
+        url("../Muli/MediumItalic.ttf") format("truetype"),
+        url("../Muli/Regular.ttf") format("truetype"),
+        url("./Muli/SemiBold.ttf") format("truetype"),
+        url("../Muli/SemiBoldItalic.ttf") format("truetype");
+  }
+
+  /*------------------------------DEBUT DU CODE------------------------------*/
+
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "footer footer footer footer";
+}
+
+
+/*--------------------- MAIN------------------*/ 
+
+
+.main { 
+    grid-area: main;
+  }
+
+
+  /*---- MEMBERSHIP - ARTICLE ----*/
+
+article {      grid-template-columns: 31% 31%;
+    grid-template-rows: 45% 10%;
+    display: grid;
+    grid-gap: 3em;
+    justify-content: center;
+    align-self: center;
+    line-height: 0.5;
+
+}
+
+#membership {
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(191, 140, 118, 0.9)),
+    url('./video-bg-1-1.jpg');
+    width: 100%;
+    height: 360px;
+    background-size: 100%;
+    color: white;
+    background-position: 0% 105%;}
+
+.ruler {  position: absolute;
+    top:360px;
+    background-image:url('./ruler.png');
+    width:100%;
+    height:10%;
+    background-size: 10%;
+    opacity: 0.4;
+    background-repeat: repeat-x;
+    z-index: -1;}
+
+
+
+/* ---- Member vid ---- */
+.member-vid { display:grid;
+    margin-top: 7em;
+width:450px;
+height:350px;
+transform: translate(-20%, -8%);
+align-content: center;
+justify-items: center;}
+
+.member-vid__vid {      position:absolute;
+    width:450px;
+    z-index: 2;
+  }
+
+  .member-vid__play {    position:relative;
+    width:90px;
+    fill: white;
+    z-index: 3;
+  }
+
+/* ---- Member content ---- */
+.member { 
+position: absolute;
+padding-left:40em;
+padding-top:5.2em;
+
+     }
+
+.member a {
+        text-decoration: none;
+        color:var(--secondary-color);
+        font-weight:300;
+        font-size:10px;
+      }
+
+
+.member img {  display: inline-flex;
+    align-self: center;
+    width:10px;
+    padding-right: 10px;
+
+  }
+
+
+.member p{
+        color:white;
+        font-family: "Muli", sans-serif;
+        font-weight:500;
+        font-size:1.1vw;
+        line-height:2.4;
+
+            }
+
+
+.member__title {line-height:1.2;
+        font-family: "Prata";
+        font-size:2.2vw;
+        padding-bottom:0.5em;
+      }
+
+
+.member__bouton {margin-top:1em;
+    /* haut | droit | bas | gauche */
+        padding: 0.3em 5.5em 0.3em 5.5em;
+        border-radius: 5px;
+        background-color:white;
+        border: 1px white;
+        text-align: center;
+        width:fit-content;
+
+      }
+
+
+
+
